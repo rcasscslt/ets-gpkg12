@@ -130,12 +130,12 @@ public class ElevationTests extends TileTests {
 					passFlag |= (1 << 2);
 				} else if ("scale".equals(name)){
 					assertTrue("REAL".equals(resultSet.getString("type")), ErrorMessage.format(ErrorMessageKeys.COVERAGE_ANCILLARY_COLUMNS_INVALID, "scale type"));
-					assertTrue(resultSet.getInt("notnull") == 1, ErrorMessage.format(ErrorMessageKeys.COVERAGE_ANCILLARY_COLUMNS_INVALID, "scale notnull"));
+					assertTrue(resultSet.getInt("notnull") == 0, ErrorMessage.format(ErrorMessageKeys.COVERAGE_ANCILLARY_COLUMNS_INVALID, "scale notnull"));
 					assertTrue(resultSet.getFloat("dflt_value") == 1.0, ErrorMessage.format(ErrorMessageKeys.COVERAGE_ANCILLARY_COLUMNS_INVALID, "scale default"));
 					passFlag |= (1 << 3);
 				} else if ("offset".equals(name)){
 					assertTrue("REAL".equals(resultSet.getString("type")), ErrorMessage.format(ErrorMessageKeys.COVERAGE_ANCILLARY_COLUMNS_INVALID, "offset type"));
-					assertTrue(resultSet.getInt("notnull") == 1, ErrorMessage.format(ErrorMessageKeys.COVERAGE_ANCILLARY_COLUMNS_INVALID, "offset notnull"));
+					assertTrue(resultSet.getInt("notnull") == 0, ErrorMessage.format(ErrorMessageKeys.COVERAGE_ANCILLARY_COLUMNS_INVALID, "offset notnull"));
 					assertTrue(resultSet.getFloat("dflt_value") == 0, ErrorMessage.format(ErrorMessageKeys.COVERAGE_ANCILLARY_COLUMNS_INVALID, "offset default"));
 					passFlag |= (1 << 4);
 				} else if ("precision".equals(name)){
@@ -193,12 +193,12 @@ public class ElevationTests extends TileTests {
 					passFlag |= (1 << 2);
 				} else if ("scale".equals(name)){
 					assertTrue("REAL".equals(resultSet.getString("type")), ErrorMessage.format(ErrorMessageKeys.TILE_ANCILLARY_COLUMNS_INVALID, "scale type"));
-					assertTrue(resultSet.getInt("notnull") == 1, ErrorMessage.format(ErrorMessageKeys.TILE_ANCILLARY_COLUMNS_INVALID, "scale notnull"));
+					assertTrue(resultSet.getInt("notnull") == 0, ErrorMessage.format(ErrorMessageKeys.TILE_ANCILLARY_COLUMNS_INVALID, "scale notnull"));
 					assertTrue(resultSet.getFloat("dflt_value") == 1.0, ErrorMessage.format(ErrorMessageKeys.TILE_ANCILLARY_COLUMNS_INVALID, "scale default"));
 					passFlag |= (1 << 3);
 				} else if ("offset".equals(name)){
 					assertTrue("REAL".equals(resultSet.getString("type")), ErrorMessage.format(ErrorMessageKeys.TILE_ANCILLARY_COLUMNS_INVALID, "offset type"));
-					assertTrue(resultSet.getInt("notnull") == 1, ErrorMessage.format(ErrorMessageKeys.TILE_ANCILLARY_COLUMNS_INVALID, "offset notnull"));
+					assertTrue(resultSet.getInt("notnull") == 0, ErrorMessage.format(ErrorMessageKeys.TILE_ANCILLARY_COLUMNS_INVALID, "offset notnull"));
 					assertTrue(resultSet.getFloat("dflt_value") == 0, ErrorMessage.format(ErrorMessageKeys.TILE_ANCILLARY_COLUMNS_INVALID, "offset default"));
 					passFlag |= (1 << 4);
 				} else if ("min".equals(name)){
